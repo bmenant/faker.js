@@ -381,6 +381,7 @@ describe('finance.js', function () {
         });
         it("throws an error if the passed country code is not supported", function () {
             assert.throws(function() { faker.finance.iban(false, 'AA');}, /Country code AA not supported/);
+            assert.throws(function() { faker.finance.iban(false, 'EU');}, /Country code EU not supported/);
         });
     });
 
